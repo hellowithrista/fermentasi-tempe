@@ -645,9 +645,9 @@
   }
 
   function getNh3Status(v) {
-    if (v <= 50) return ['status-normal', '✓ Aman (≤50 ppm)'];
-    if (v <= 100) return ['status-warning', '⚠ Sedang Tinggi'];
-    return ['status-danger', '⚠ Berbahaya (>100 ppm)'];
+    if (v < 5) return ['status-normal', '✓ Aman'];
+    if (v === 5) return ['status-warning', '⚠ Batas Aman'];
+    return ['status-danger', '⚠ Berbahaya'];
   }
 
   // ===== FETCH LATEST =====
